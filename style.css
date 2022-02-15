@@ -42,3 +42,39 @@ body {
   height: 80px;
   width: 80px;
 }
+
+.light-bulb {
+  margin-top: 20px;
+  padding: 0 25px;
+  display: inline-block;
+  background-color: gray;
+  border-radius: 15px;
+}
+
+.color-on {
+  background-color: yellow;
+}
+
+.color-end {
+  background-color: darkgray;
+}
+
+.btn-container {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-container li {
+  margin: 0 10px;
+}
+
+.btn-container button {
+  width: 75px;
+  height: 25px;
+}
+
+.btn-end {
+  background-color: darkgray;
+}

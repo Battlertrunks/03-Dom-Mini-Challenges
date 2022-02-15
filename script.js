@@ -37,3 +37,31 @@ removeCoins.forEach((coin) => {
     coin.remove();
   });
 });
+
+const lightButtons = document.querySelectorAll(".light-btn");
+const lightBulb = document.querySelector(".light-bulb");
+let switchingLights = true;
+
+lightButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    if (switchingLights) {
+      const lightBulbMode = btn.dataset.mode;
+      switch (lightBulbMode) {
+        case "on":
+          lightBulb.classList.add("color-on");
+          break;
+        case "off":
+          lightBulb.classList.remove("color-on");
+          break;
+        case "toggle":
+          lightBulb.classList.toggle("color-on");
+          break;
+        case "end":
+          lightButtons.forEach((btn) => btn.classList.add("btn-end"));
+          lightBulb.classList.add("color-end");
+          switchingLights = false;
+          break;
+      }
+    }
+  });
+});
