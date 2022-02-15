@@ -1,3 +1,44 @@
 body {
   text-align: center;
 }
+
+.coins {
+  display: inline;
+}
+
+.coin-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.coin {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px gray solid;
+  border-radius: 50%;
+  background-color: lightgray;
+}
+
+.penny {
+  height: 50px;
+  width: 50px;
+  background-color: burlywood;
+}
+
+.nickel {
+  height: 60px;
+  width: 60px;
+}
+
+.dime {
+  height: 50px;
+  width: 50px;
+}
+
+.quarter {
+  height: 80px;
+  width: 80px;
+}
