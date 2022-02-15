@@ -21,12 +21,15 @@ buttonMoney.addEventListener("click", (e) => {
   const amount = document.querySelector("#amount").value;
   const coinType = document.querySelector("#coin").value;
   for (let i = 0; i < amount; i++) {
-    let coin = document.createElement("div");
+    const coin = document.createElement("div");
     coin.classList.add(coinType, `coin`);
-    let coinPara = document.createElement("p");
+    const coinPara = document.createElement("p");
     coinPara.textContent = coinType;
     divCoinToAttach.append(coin);
     coin.append(coinPara);
+    coin.addEventListener("click", () => {
+      coin.remove();
+    });
     removeCoins.push(document.querySelector(".coin"));
   }
 });
@@ -57,7 +60,10 @@ lightButtons.forEach((btn) => {
           lightBulb.classList.toggle("color-on");
           break;
         case "end":
-          lightButtons.forEach((btn) => btn.classList.add("btn-end"));
+          lightButtons.forEach((inner_btn) => {
+            inner_btn.classList.add("btn-end");
+            inner_btn.disabled = true;
+          });
           lightBulb.classList.add("color-end");
           switchingLights = false;
           break;
